@@ -58,3 +58,48 @@ if (x > 50):
     pass
 else:
     x = x + 50
+print(f"Pass Program COMPLETE!")      
+
+try:
+    n = int(input("Enter an integer: "))
+except Exception as e:
+    print(f"That's not an integer! : {e}")
+
+try:
+    result = 10 / 0
+except Exception as e:
+    print(f"Caught a general error: {e}")
+print(f"Exception Program COMPLETE!")  
+
+'''
+- Write a program that continuously asks the user to provide an input number.
+- Print the square of that input number.
+- The program should stop if the user enters 5.
+- In case user enters any multiple of 4, skip it.
+'''
+num = 0
+while(num != 5):
+    num = int(input("Enter a number : "))
+    if(num == 5):
+        break
+    elif(num % 4 == 0):
+        continue
+    else:
+        print(f"{num ** 2}")
+print(f"Loop Program COMPLETE!")          
+
+'''
+**Exercise 2:**
+  - Write a for loop that iterates over a list of numbers and prints only the even numbers.
+'''
+
+num_list = [1,2,4,5,6,8,9]
+for num in num_list:
+    if(num % 2 == 0):
+        print(f"{num}")
+print(f"Loop Program COMPLETE!")     
+
+'''
+#### **Diamond Pattern:**
+  - Write a program to print a diamond shape using nested loops.
+'''
